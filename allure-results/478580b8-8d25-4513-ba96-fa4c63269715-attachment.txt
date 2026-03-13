@@ -1,0 +1,11 @@
+APIResponse: 200 OK
+  Content-Length: 454
+  Content-Type: application/json; charset=utf-8
+  Date: Fri, 13 Mar 2026 07:26:39 GMT
+  Etag: W/"1c6-EKyCTcTePesmxfiWzwEjTd0qi5k"
+  Nel: {"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}
+  Report-To: {"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=g67ZAkUg8cloULYVcsggGGMa7N%2FYFCC1JRVo4OTM4Lk%3D\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\u0026ts=1773386799"}],"max_age":3600}
+  Reporting-Endpoints: heroku-nel="https://nel.heroku.com/reports?s=g67ZAkUg8cloULYVcsggGGMa7N%2FYFCC1JRVo4OTM4Lk%3D&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&ts=1773386799"
+  Server: Heroku
+  Via: 1.1 heroku-router
+  X-Powered-By: Express

@@ -1,0 +1,11 @@
+ whole body =  [
+  { bookingid: 1272 },
+  { bookingid: 550 },
+  { bookingid: 642 },
+  { bookingid: 2089 },
+  { bookingid: 1387 },
+  { bookingid: 1513 },
+  { bookingid: 1600 },
+  { bookingid: 2379 }
+]
+ Booking id = 2379

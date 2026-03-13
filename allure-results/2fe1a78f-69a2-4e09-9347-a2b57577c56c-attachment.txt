@@ -1,0 +1,19 @@
+whole body =  [
+  { bookingid: 1953 }, { bookingid: 3119 },
+  { bookingid: 2887 }, { bookingid: 2588 },
+  { bookingid: 2584 }, { bookingid: 3091 },
+  { bookingid: 3916 }, { bookingid: 3149 },
+  { bookingid: 3102 }, { bookingid: 1117 },
+  { bookingid: 1995 }, { bookingid: 3081 },
+  { bookingid: 3404 }, { bookingid: 3142 },
+  { bookingid: 3297 }, { bookingid: 1980 },
+  { bookingid: 3433 }
+]
+{
+  firstname: 'Jim',
+  lastname: 'Brown',
+  totalprice: 111,
+  depositpaid: true,
+  bookingdates: { checkin: '2018-01-01', checkout: '2019-01-01' },
+  additionalneeds: 'Breakfast'
+}
