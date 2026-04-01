@@ -1,5 +1,5 @@
 import { APIRequestContext, APIResponse } from "@playwright/test";
-import { test } from "@playwright/test";
+import { expect } from "@playwright/test";
 
 export class requestHandler {
   private request: APIRequestContext;
@@ -14,13 +14,18 @@ export class requestHandler {
     params?: Record<string, string | number | boolean>,
     headers?: Record<string, string>,
   ): Promise<APIResponse> {
-     const responseObject = await this.request.get(`${baseURL}${endpoint}`, {
-       params: params,
-       headers: headers,
-     });
+    const response = await this.request.get(`${baseURL}${endpoint}`, {
+      params: params,
+      headers: headers,
+    });
 
-     const responseJSON = await responseObject.json();
-
-     return responseJSON;
+ if (!response.ok()) {
+   const responseText = await response.text();
+   throw new Error(
+     `${baseURL}/${endpoint} failed: ` +
+       `${response.status()} ${response.statusText()}, responseBody : ${responseText}`,
+   );
+ }
+   return response;
   }
 }
