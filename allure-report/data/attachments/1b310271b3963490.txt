@@ -1,0 +1,16 @@
+Before update : {
+  firstname: 'Bob',
+  lastname: 'Smith',
+  totalprice: 111,
+  depositpaid: true,
+  bookingdates: { checkin: '2018-01-01', checkout: '2019-01-01' },
+  additionalneeds: 'Breakfast'
+}
+After update : {
+  firstname: 'Moriah',
+  lastname: 'Swift',
+  totalprice: 3961,
+  depositpaid: false,
+  bookingdates: { checkin: '2026-03-23', checkout: '2026-03-28' },
+  additionalneeds: 'Hyundai Model T'
+}

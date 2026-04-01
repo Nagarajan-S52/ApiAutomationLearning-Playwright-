@@ -1,0 +1,8 @@
+resposne : {
+  firstname: 'Kara',
+  lastname: 'Bosco',
+  totalprice: 4034,
+  depositpaid: false,
+  bookingdates: { checkin: '2026-03-18', checkout: '2026-03-23' },
+  additionalneeds: 'Land Rover Element'
+}

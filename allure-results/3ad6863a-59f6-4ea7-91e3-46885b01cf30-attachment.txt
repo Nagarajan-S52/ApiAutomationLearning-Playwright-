@@ -1,0 +1,16 @@
+Before update : {
+  firstname: 'John',
+  lastname: 'Smith',
+  totalprice: 111,
+  depositpaid: true,
+  bookingdates: { checkin: '2018-01-01', checkout: '2019-01-01' },
+  additionalneeds: 'Breakfast'
+}
+After update : {
+  firstname: 'Ines',
+  lastname: 'Bergstrom',
+  totalprice: 3047,
+  depositpaid: true,
+  bookingdates: { checkin: '2026-03-23', checkout: '2026-03-28' },
+  additionalneeds: 'Jeep Silverado'
+}

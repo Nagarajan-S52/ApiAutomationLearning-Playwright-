@@ -1,0 +1,8 @@
+resposne : {
+  firstname: 'Glenda',
+  lastname: "O'Hara-Nienow",
+  totalprice: 1623,
+  depositpaid: true,
+  bookingdates: { checkin: '2026-03-18', checkout: '2026-03-23' },
+  additionalneeds: 'Toyota Grand Caravan'
+}

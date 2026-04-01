@@ -1,0 +1,17 @@
+whole body =  [
+  { bookingid: 98 },
+  { bookingid: 59 },
+  { bookingid: 35 },
+  { bookingid: 186 },
+  { bookingid: 11 },
+  { bookingid: 5 },
+  { bookingid: 133 }
+]
+Single Booking =  {
+  firstname: 'Jim',
+  lastname: 'Brown',
+  totalprice: 111,
+  depositpaid: true,
+  bookingdates: { checkin: '2018-01-01', checkout: '2019-01-01' },
+  additionalneeds: 'Breakfast'
+}

@@ -1,0 +1,16 @@
+whole body =  [
+  { bookingid: 1953 },
+  { bookingid: 2588 },
+  { bookingid: 2584 },
+  { bookingid: 1117 },
+  { bookingid: 1995 },
+  { bookingid: 1980 }
+]
+{
+  firstname: 'Jim',
+  lastname: 'Brown',
+  totalprice: 111,
+  depositpaid: true,
+  bookingdates: { checkin: '2018-01-01', checkout: '2019-01-01' },
+  additionalneeds: 'Breakfast'
+}

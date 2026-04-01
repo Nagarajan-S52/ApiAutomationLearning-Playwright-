@@ -1,0 +1,6 @@
+response : Promise {
+  <pending>,
+  [Symbol(async_id_symbol)]: 291,
+  [Symbol(trigger_async_id_symbol)]: 153,
+  [Symbol(kResourceStore)]: undefined
+}

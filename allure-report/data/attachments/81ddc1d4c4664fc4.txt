@@ -1,0 +1,8 @@
+resposne : {
+  firstname: 'Josefina',
+  lastname: 'Jones-Hammes',
+  totalprice: 736,
+  depositpaid: true,
+  bookingdates: { checkin: '2026-03-18', checkout: '2026-03-23' },
+  additionalneeds: 'Nissan 2'
+}
