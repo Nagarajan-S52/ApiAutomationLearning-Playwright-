@@ -1,8 +1,12 @@
 
-import { baseUrl } from "../config/url.json";
+import { urls } from "../config/urls.json";
 
 
-export const restfulBookerBaseUrl = baseUrl.restfulBooker as string;
+export class BaseUrl {
+
+  static readonly restfulBooker = urls.restfulBooker as string;
+
+}
 
 
 

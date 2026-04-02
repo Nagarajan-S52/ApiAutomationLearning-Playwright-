@@ -1,0 +1,11 @@
+ Response -->  {
+  bookingid: 2798,
+  booking: {
+    firstname: 'Ali',
+    lastname: 'Bartoletti',
+    totalprice: 387,
+    depositpaid: false,
+    bookingdates: { checkin: '2026-04-02', checkout: '2026-04-07' },
+    additionalneeds: 'On the Duty of Civil Disobedience'
+  }
+}

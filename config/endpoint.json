@@ -1,8 +1,0 @@
-{
-    "endpoint":{
-        "restfulBooker":{
-            "Booking":"/booking",
-            "BookingById":"/booking/{id}"
-        }
-    }
-}

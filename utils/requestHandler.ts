@@ -1,7 +1,7 @@
 import { APIRequestContext, APIResponse } from "@playwright/test";
 import { expect } from "@playwright/test";
 
-export class requestHandler {
+export class RequestHandler {
   private request: APIRequestContext;
 
   constructor(request: APIRequestContext) {
@@ -15,17 +15,39 @@ export class requestHandler {
     headers?: Record<string, string>,
   ): Promise<APIResponse> {
     const response = await this.request.get(`${baseURL}${endpoint}`, {
-      params: params,
-      headers: headers,
+      params,
+      headers,
     });
 
- if (!response.ok()) {
-   const responseText = await response.text();
-   throw new Error(
-     `${baseURL}/${endpoint} failed: ` +
-       `${response.status()} ${response.statusText()}, responseBody : ${responseText}`,
-   );
- }
-   return response;
+    if (!response.ok()) {
+      const responseText = await response.text();
+      throw new Error(
+        ` GET Request ${baseURL}/${endpoint} failed: ` +
+          `${response.status()} ${response.statusText()}, responseBody : ${responseText}`,
+      );
+    }
+    return response;
+  }
+
+  async postRequest(
+    baseURL: string,
+    endpoint: string,
+    body: object,
+    headers?: Record<string, string>,
+  ): Promise<APIResponse> {
+    const response = await this.request.post(`${baseURL}${endpoint}`, {
+      data: body,
+      headers,
+    });
+
+    if (!response.ok()) {
+      const responseText = await response.text();
+      throw new Error(
+        `POST Request ${baseURL}${endpoint} failed: ` +
+          `${response.status()} ${response.statusText()} — ${responseText}`,
+      );
+    }
+
+    return response;
   }
 }
