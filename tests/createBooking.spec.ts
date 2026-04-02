@@ -3,13 +3,13 @@ import { expect } from "@playwright/test";
 import { BaseUrl } from "../constants/urls";
 import { Endpoints } from "../constants/endpoints";
 import { Headers } from "../constants/headers";
-import { postCreateBooking } from "../data/testData";
+import { createBooking } from "../data/testData";
 
 test("Create new booking details", async ({ apiRequest }) => {
   const response = await apiRequest.postRequest(
     BaseUrl.restfulBooker,
     Endpoints.restfulBooker.booking,
-    postCreateBooking,
+    createBooking,
     Headers.basicHeader,
   );
   expect(response.status()).toBe(200);
@@ -24,17 +24,19 @@ test("Create new booking details", async ({ apiRequest }) => {
   expect(typeof jsonResponse.bookingid).toBe("number"); // is a number
 
   // validate booking fields match payload
-  expect(jsonResponse.booking.firstname).toBe(postCreateBooking.firstname);
-  expect(jsonResponse.booking.lastname).toBe(postCreateBooking.lastname);
-  expect(jsonResponse.booking.totalprice).toBe(postCreateBooking.totalprice);
-  expect(jsonResponse.booking.depositpaid).toBe(postCreateBooking.depositpaid);
-  expect(jsonResponse.booking.additionalneeds).toBe(postCreateBooking.additionalneeds);
+  expect(jsonResponse.booking.firstname).toBe(createBooking.firstname);
+  expect(jsonResponse.booking.lastname).toBe(createBooking.lastname);
+  expect(jsonResponse.booking.totalprice).toBe(createBooking.totalprice);
+  expect(jsonResponse.booking.depositpaid).toBe(createBooking.depositpaid);
+  expect(jsonResponse.booking.additionalneeds).toBe(
+    createBooking.additionalneeds,
+  );
 
   // validate booking dates match payload
   expect(jsonResponse.booking.bookingdates.checkin).toBe(
-    postCreateBooking.bookingdates.checkin,
+    createBooking.bookingdates.checkin,
   );
   expect(jsonResponse.booking.bookingdates.checkout).toBe(
-    postCreateBooking.bookingdates.checkout,
+    createBooking.bookingdates.checkout,
   );
 });
