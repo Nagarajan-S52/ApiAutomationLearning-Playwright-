@@ -1,0 +1,16 @@
+Before update : {
+  firstname: 'Josh',
+  lastname: 'Allen',
+  totalprice: 111,
+  depositpaid: true,
+  bookingdates: { checkin: '2018-01-01', checkout: '2019-01-01' },
+  additionalneeds: 'superb owls'
+}
+After update : {
+  firstname: 'Jean',
+  lastname: 'Hahn',
+  totalprice: 1989,
+  depositpaid: false,
+  bookingdates: { checkin: '2026-04-02', checkout: '2026-04-07' },
+  additionalneeds: 'Chrysler Corvette'
+}

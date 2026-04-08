@@ -50,4 +50,69 @@ export class RequestHandler {
 
     return response;
   }
+
+  async putRequest(
+    baseURL: string,
+    endpoint: string,
+    body: object,
+    headers?: Record<string, string>,
+  ): Promise<APIResponse> {
+    const response = await this.request.put(`${baseURL}${endpoint}`, {
+      data: body,
+      headers,
+    });
+
+    if (!response.ok()) {
+      const responseText = await response.text();
+      throw new Error(
+        `PUT Request ${baseURL}${endpoint} failed: ` +
+          `${response.status()} ${response.statusText()} — ${responseText}`,
+      );
+    }
+
+    return response;
+  }
+
+  async patchRequest(
+    baseURL: string,
+    endpoint: string,
+    body: object,
+    headers?: Record<string, string>,
+  ): Promise<APIResponse> {
+    const response = await this.request.patch(`${baseURL}${endpoint}`, {
+      data: body,
+      headers,
+    });
+
+    if (!response.ok()) {
+      const responseText = await response.text();
+      throw new Error(
+        `PATCH Request ${baseURL}${endpoint} failed: ` +
+          `${response.status()} ${response.statusText()} — ${responseText}`,
+      );
+    }
+
+    return response;
+  }
+
+
+  async deleteRequest(
+    baseURL: string,
+    endpoint: string,
+    headers?: Record<string, string>,
+  ): Promise<APIResponse> {
+    const response = await this.request.delete(`${baseURL}${endpoint}`, {
+      headers,
+    });
+
+    if (!response.ok()) {
+      const responseText = await response.text();
+      throw new Error(
+        `DELETE Request ${baseURL}${endpoint} failed: ` +
+          `${response.status()} ${response.statusText()} — ${responseText}`,
+      );
+    }
+
+    return response;
+  }
 }

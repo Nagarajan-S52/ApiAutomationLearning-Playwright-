@@ -4,6 +4,8 @@ import { BaseUrl } from "../constants/urls";
 import { Endpoints } from "../constants/endpoints";
 import { Headers } from "../constants/headers";
 import { createBooking } from "../data/testData";
+import { postBookingSchema } from "../data/bookingSchema";
+import { validateSchema } from "../utils/validateHelper";
 
 test("Create new booking details", async ({ apiRequest }) => {
   const response = await apiRequest.postRequest(
@@ -17,6 +19,8 @@ test("Create new booking details", async ({ apiRequest }) => {
 
     const jsonResponse = await response.json();
   console.log(" Response --> ", jsonResponse);
+
+  validateSchema(jsonResponse, postBookingSchema);
 
   // validate bookingid
   expect(jsonResponse.bookingid).toBeDefined(); // field exists
