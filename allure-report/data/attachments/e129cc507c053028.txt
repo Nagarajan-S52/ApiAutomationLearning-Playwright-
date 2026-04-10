@@ -1,0 +1,9 @@
+Last Booking id =  686
+ Response -->  {
+  firstname: 'Agnes',
+  lastname: 'Hudson',
+  totalprice: 279,
+  depositpaid: true,
+  bookingdates: { checkin: '2026-04-13', checkout: '2026-04-08' },
+  additionalneeds: 'Charlotte Brontë'
+}

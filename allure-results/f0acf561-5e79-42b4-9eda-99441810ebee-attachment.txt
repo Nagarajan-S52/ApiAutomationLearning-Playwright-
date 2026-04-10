@@ -1,0 +1,11 @@
+ Response -->  {
+  bookingid: 2793,
+  booking: {
+    firstname: 'Ken',
+    lastname: "O'Conner",
+    totalprice: 732,
+    depositpaid: false,
+    bookingdates: { checkin: '2026-04-09', checkout: '2026-04-14' },
+    additionalneeds: 'The Odyssey'
+  }
+}

@@ -1,0 +1,9 @@
+Last Booking id =  3071
+ Response -->  {
+  firstname: 'Cora',
+  lastname: 'Bode',
+  totalprice: 149,
+  depositpaid: false,
+  bookingdates: { checkin: '2026-04-14', checkout: '2026-04-09' },
+  additionalneeds: 'Jonathan Franzen'
+}

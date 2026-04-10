@@ -1,0 +1,11 @@
+ Response -->  {
+  bookingid: 5507,
+  booking: {
+    firstname: 'Virgil',
+    lastname: 'Kiehn',
+    totalprice: 509,
+    depositpaid: false,
+    bookingdates: { checkin: '2026-04-08', checkout: '2026-04-13' },
+    additionalneeds: 'Adventures of Huckleberry Finn'
+  }
+}

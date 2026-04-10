@@ -1,0 +1,11 @@
+ Response -->  {
+  bookingid: 861,
+  booking: {
+    firstname: 'Felipe',
+    lastname: 'Corkery',
+    totalprice: 450,
+    depositpaid: true,
+    bookingdates: { checkin: '2026-04-09', checkout: '2026-04-14' },
+    additionalneeds: 'The Hound of the Baskervilles'
+  }
+}

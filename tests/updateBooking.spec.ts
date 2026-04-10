@@ -2,39 +2,40 @@ import { test } from "../utils/fixtures";
 import { expect } from "@playwright/test";
 import { BaseUrl } from "../constants/urls";
 import { Endpoints } from "../constants/endpoints";
-import { Headers } from "../constants/headers";
+import { HEADERS } from "../constants/headers";
 import { filterByParams } from "../data/testData";
 import { updateBooking } from "../data/testData";
 import { putBookingSchema } from "../data/bookingSchema";
 import { validateSchema } from "../utils/validateHelper";
+import { expectedStatus } from "../constants/statusCodes";
 
 test("Update the booking details", async ({ apiRequest }) => {
   const getResponse = await apiRequest.getRequest(
     BaseUrl.restfulBooker,
     Endpoints.restfulBooker.booking,
+    expectedStatus.OK,
     {
       firstname: filterByParams.firstname,
       lastname: filterByParams.lastname,
     },
-    Headers.basicHeader,
+    HEADERS.basicHeader,
   );
 
   const getJsonResponse = await getResponse.json();
   const lastBookingId = getJsonResponse[getJsonResponse.length - 1].bookingid;
-  console.log("Last Booking id = ", lastBookingId);
 
   const putResponse = await apiRequest.putRequest(
     BaseUrl.restfulBooker,
     `${Endpoints.restfulBooker.booking}/${lastBookingId}`,
     updateBooking,
-    Headers.headerWithAuth(),
+    expectedStatus.OK,
+    HEADERS.headerWithAuth(),
   );
 
   expect(putResponse.status()).toBe(200);
   expect(putResponse.statusText()).toContain("OK");
 
   const putJsonResponse = await putResponse.json();
-  console.log(" Response --> ", putJsonResponse);
 
   validateSchema(putJsonResponse, putBookingSchema);
   // validate update booking fields match payload

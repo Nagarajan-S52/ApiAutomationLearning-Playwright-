@@ -1,5 +1,11 @@
 {
-    "urls":{
-"restfulBooker":"https://restful-booker.herokuapp.com"
-}
+  "local": {
+    "restfulBooker": "https://restful-booker.herokuapp.com"
+  },
+  "dev": {
+    "restfulBooker": "https://restful-booker.herokuapp.com"
+  },
+  "qa": {
+    "restfulBooker": "https://restful-booker.herokuapp.com"
+  }
 }

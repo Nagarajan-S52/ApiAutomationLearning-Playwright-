@@ -1,0 +1,11 @@
+ Response -->  {
+  bookingid: 4024,
+  booking: {
+    firstname: 'Jedediah',
+    lastname: 'Lowe',
+    totalprice: 438,
+    depositpaid: false,
+    bookingdates: { checkin: '2026-04-08', checkout: '2026-04-13' },
+    additionalneeds: 'In Search of Lost Time'
+  }
+}

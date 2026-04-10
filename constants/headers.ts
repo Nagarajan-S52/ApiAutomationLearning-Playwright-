@@ -1,5 +1,5 @@
 
-export const Headers = {
+export const HEADERS = {
 
 
   basicHeader: {

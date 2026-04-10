@@ -1,0 +1,11 @@
+ Response -->  {
+  bookingid: 1188,
+  booking: {
+    firstname: 'Laurence',
+    lastname: 'Tremblay',
+    totalprice: 684,
+    depositpaid: false,
+    bookingdates: { checkin: '2026-04-09', checkout: '2026-04-14' },
+    additionalneeds: 'Of Mice and Men'
+  }
+}

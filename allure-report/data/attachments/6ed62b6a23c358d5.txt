@@ -1,0 +1,11 @@
+ Response -->  {
+  bookingid: 2116,
+  booking: {
+    firstname: 'Cecelia',
+    lastname: 'Gutmann',
+    totalprice: 284,
+    depositpaid: true,
+    bookingdates: { checkin: '2026-04-09', checkout: '2026-04-14' },
+    additionalneeds: 'East of Eden'
+  }
+}

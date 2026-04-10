@@ -1,0 +1,11 @@
+ Response -->  {
+  bookingid: 4300,
+  booking: {
+    firstname: 'Simon',
+    lastname: 'Renner',
+    totalprice: 21,
+    depositpaid: false,
+    bookingdates: { checkin: '2026-04-08', checkout: '2026-04-13' },
+    additionalneeds: 'Brave New World'
+  }
+}

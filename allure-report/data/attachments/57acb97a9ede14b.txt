@@ -1,0 +1,11 @@
+ Response -->  {
+  bookingid: 4167,
+  booking: {
+    firstname: 'Elsie',
+    lastname: 'Crist',
+    totalprice: 232,
+    depositpaid: false,
+    bookingdates: { checkin: '2026-04-09', checkout: '2026-04-14' },
+    additionalneeds: 'The Trial'
+  }
+}

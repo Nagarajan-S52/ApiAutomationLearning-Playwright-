@@ -2,23 +2,24 @@ import { test } from "../utils/fixtures";
 import { expect } from "@playwright/test";
 import { BaseUrl } from "../constants/urls";
 import { Endpoints } from "../constants/endpoints";
-import { Headers } from "../constants/headers";
+import { HEADERS } from "../constants/headers";
 import { createBooking } from "../data/testData";
 import { postBookingSchema } from "../data/bookingSchema";
 import { validateSchema } from "../utils/validateHelper";
+import { expectedStatus } from "../constants/statusCodes";
 
 test("Create new booking details", async ({ apiRequest }) => {
   const response = await apiRequest.postRequest(
     BaseUrl.restfulBooker,
     Endpoints.restfulBooker.booking,
     createBooking,
-    Headers.basicHeader,
+    expectedStatus.OK,
+    HEADERS.basicHeader,
   );
   expect(response.status()).toBe(200);
   expect(response.statusText()).toContain("OK");
 
-    const jsonResponse = await response.json();
-  console.log(" Response --> ", jsonResponse);
+  const jsonResponse = await response.json();
 
   validateSchema(jsonResponse, postBookingSchema);
 

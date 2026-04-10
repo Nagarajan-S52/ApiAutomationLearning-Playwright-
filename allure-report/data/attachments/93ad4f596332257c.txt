@@ -1,0 +1,11 @@
+ Response -->  {
+  bookingid: 608,
+  booking: {
+    firstname: 'Jermaine',
+    lastname: 'Blick',
+    totalprice: 382,
+    depositpaid: true,
+    bookingdates: { checkin: '2026-04-09', checkout: '2026-04-14' },
+    additionalneeds: 'Wuthering Heights'
+  }
+}

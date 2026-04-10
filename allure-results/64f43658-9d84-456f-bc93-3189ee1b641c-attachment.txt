@@ -1,0 +1,11 @@
+ Response -->  {
+  bookingid: 2479,
+  booking: {
+    firstname: 'Al',
+    lastname: 'Hauck',
+    totalprice: 319,
+    depositpaid: true,
+    bookingdates: { checkin: '2026-04-09', checkout: '2026-04-14' },
+    additionalneeds: 'The Blue Castle'
+  }
+}
